@@ -753,10 +753,10 @@ a:hover {
 --------------------------------------------------------------*/
 .service-box {
   background-color: #fff;
-  padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
 }
+
 
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
@@ -824,6 +824,7 @@ a:hover {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-color: #fff;
+  border-radius: 1rem;
 }
 
 .work-box:hover img {
@@ -833,6 +834,7 @@ a:hover {
 .work-img {
   display: block;
   overflow: hidden;
+  border-radius: 1rem;
 }
 
 .work-img img {
@@ -1140,6 +1142,7 @@ a:hover {
 @media (min-width: 767px) {
   .card-blog {
     margin-bottom: 3rem;
+    border-radius: 1rem;
   }
 }
 
