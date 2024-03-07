@@ -197,6 +197,7 @@ a:hover {
 
 .socials ul li {
   display: inline-block;
+  margin-bottom: 20px;
 }
 
 .socials .ico-circle {
@@ -825,6 +826,45 @@ a:hover {
   backface-visibility: hidden;
   background-color: #fff;
   border-radius: 1rem;
+  min-height: 280px;
+}
+
+
+@media (min-width: 768px){
+  #collaborations .work-box, #interviews .work-box{
+    min-height: 250px;
+  }
+  #mentorship .work-box{
+    min-height: 270px;
+  }
+  .positionsOfResponsibility{
+    min-height: 380px !important;
+  }
+  #certifications .service-box{
+    min-height: 285px;
+  }
+}
+@media (min-width: 992px){
+  .work-box {
+    min-height: 330px;
+  }
+  #collaborations .work-box, #interviews .work-box, #mentorship .work-box{
+    min-height: 290px;
+  }
+  .positionsOfResponsibility{
+    min-height: 420px !important;
+  }
+  #certifications .service-box{
+    min-height: 315px;
+  }
+}
+@media (min-width: 1200px){
+  .positionsOfResponsibility{
+    min-height: 400px !important;
+  }
+  #certifications .service-box{
+    min-height: 355px;
+  }
 }
 
 .work-box:hover img {

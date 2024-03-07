@@ -92,13 +92,13 @@
     var pixels = 50;
     var top = 1200;
     if ($(window).scrollTop() > pixels) {
-      $('.navbar-expand-md').addClass('navbar-reduce');
-      $('.navbar-expand-md').removeClass('navbar-trans');
+      $('.navbar').addClass('navbar-reduce');
+      $('.navbar').removeClass('navbar-trans');
     } else {
       if (!$('#navbarDefault').hasClass('show')) {
-        $('.navbar-expand-md').removeClass('navbar-reduce');
+        $('.navbar').removeClass('navbar-reduce');
       }
-      $('.navbar-expand-md').addClass('navbar-trans');
+      $('.navbar').addClass('navbar-trans');
     }
     if ($(window).scrollTop() > top) {
       $('.scrolltop-mf').fadeIn(1000, "easeInOutExpo");
@@ -148,3 +148,26 @@
   });
 
 })(jQuery);
+
+// I have made this utility code to maintain proper aspect ratio of iframe tags
+// This is made because one cannot to width=100% and height=auto to take the actual height of the video (this is usually done with images)
+var j = 0;
+// this will get the width of all the iframes on first load 
+const video_width = $(".gallery_video").width()
+gallery_video = document.getElementsByClassName('gallery_video')
+for (j = 0; j < gallery_video.length; j++) {
+    // having 9:16 aspect ratio for landscape ratio, the height is calculated and set to all iframes
+    gallery_video[j].style.height = (9 / 16) * video_width + "px";
+}
+
+// This jQuery  function listens to window resize event so whenever user resizes the browser window it will recalculate the height of the iframe as the width will change
+$(document).ready(function () {
+    $(window).resize(function () {
+        var j = 0;
+        const video_width = $(".gallery_video").width()
+        gallery_video = document.getElementsByClassName('gallery_video')
+        for (j = 0; j < gallery_video.length; j++) {
+            gallery_video[j].style.height = (9 / 16) * video_width + "px";
+        }
+    });
+});
