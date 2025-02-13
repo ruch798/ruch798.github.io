@@ -1381,8 +1381,8 @@ a:hover {
 } */
 
 .one {
-  grid-column: 1;
-  grid-row: 2;
+  grid-column: 2;
+  grid-row: 5;
 }
 .two {
   grid-column: 2;
@@ -1404,7 +1404,19 @@ a:hover {
   grid-column: 1;
   grid-row: 5;
 }
-.seven {
+/* .seven {
   grid-column: 2;
   grid-row: 5;
+} */
+.eight {
+  grid-column: 1;
+  grid-row: 2;
+}
+.nine {
+  grid-column: 2;
+  grid-row: 6;
+}
+.ten {
+  grid-column: 1;
+  grid-row: 6;
 }
